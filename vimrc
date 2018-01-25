@@ -11,6 +11,7 @@ set shiftwidth=2
 set laststatus=2
 set splitright
 set splitbelow
+set completeopt=longest,menuone
 
 " Tree view
 let g:netrw_browse_split = 2
@@ -37,6 +38,13 @@ autocmd FileType php inoremap for<Space> for<Space>($i<Space>=<Space>0;$i<Space>
 autocmd FileType html inoremap <div> <div></div><Esc>b2hi
 inoremap <Tab> <C-p>
 map <Tab> w
+"inoremap <expr> <CR> getline('.')[col('.') - 2] =~ '\a' ? "\<C-P>" : "\<CR>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 " Custom commands:
 command R call FixSize()
@@ -101,6 +109,8 @@ Plugin 'davidklsn/vim-sialoquent'
 Plugin 'endel/vim-github-colorscheme'
 "Plugin 'udalov/kotlin-vim'
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'othree/vim-autocomplpop'
+Plugin 'vim-scripts/L9'
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
