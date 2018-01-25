@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "${0%/*}"
 git pull
 git submodule init
 git submodule update
