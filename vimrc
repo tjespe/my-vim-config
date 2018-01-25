@@ -28,8 +28,9 @@ if winwidth(0) > 90
 endif
 set number
 
-" Allow saving of files as sudo when I forgot to start vim using sudo.
+" Command mappings
 cmap w!! w !sudo tee > /dev/null %
+cmap Q q!
 
 " Auto complete
 inoremap {<CR> {<CR>}<Esc>ko
