@@ -36,7 +36,7 @@ inoremap {<CR> {<CR>}<Esc>ko
 autocmd FileType javascript,html inoremap for<Space> for<Space>(i<Space>=<Space>0;i<Space><<Space>array.length;i++)<Space>{<CR><BS>}<Esc>k8wv4ls
 autocmd FileType php inoremap for<Space> for<Space>($i<Space>=<Space>0;$i<Space><<Space>$array.length;$i++)<Space>{<CR><BS>}<Esc>k9wv4l
 autocmd FileType html inoremap <div> <div></div><Esc>b2hi
-inoremap <Tab> <C-p>
+inoremap <Tab> <C-n>
 map <Tab> w
 "inoremap <expr> <CR> getline('.')[col('.') - 2] =~ '\a' ? "\<C-P>" : "\<CR>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
