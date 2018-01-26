@@ -130,4 +130,4 @@ if $TERM == 'xterm-256color'
 endif
 
 " Auto update
-silent exec "! ~/.vim/install.sh > /dev/null & disown"
+silent exec "! ~/.vim/install.sh > /dev/null 2> /dev/null & disown"
