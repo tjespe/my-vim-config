@@ -42,6 +42,7 @@ autocmd FileType html inoremap <div> <div></div><Esc>b2hi
 map <Tab> >>
 map <S-Tab> <<
 inoremap <expr> <Tab> getline('.')[col('.') - 2] =~ '\a' ? "\<C-n>" : "\<Tab>"
+inoremap <S-Tab> <C-d>
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
