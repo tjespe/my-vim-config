@@ -1,17 +1,18 @@
 filetype off                  " required
-syntax on
-set mouse=a
+syntax on " enable syntax colors
+set mouse=a " enable mouse gestures
 set nocompatible              " be iMproved, required
+set laststatus=2 " Show status
+set splitright " Split buffer to the right by default
+set splitbelow " Split below by default
+
+" Auto indent
 set autoindent
 set tabstop=2
 set softtabstop=0
 set expandtab
 set smarttab
 set shiftwidth=2
-set laststatus=2
-set splitright
-set splitbelow
-set completeopt=longest,menuone
 
 " Tree view
 let g:netrw_browse_split = 2
@@ -33,6 +34,7 @@ cmap w!! w !sudo tee > /dev/null %
 cmap Q q!
 
 " Auto complete
+set completeopt=longest,menuone
 inoremap {<CR> {<CR>}<Esc>ko
 autocmd FileType javascript,html inoremap for<Space> for<Space>(i<Space>=<Space>0;i<Space><<Space>array.length;i++)<Space>{<CR><BS>}<Esc>k8wv4ls
 autocmd FileType php inoremap for<Space> for<Space>($i<Space>=<Space>0;$i<Space><<Space>$array.length;$i++)<Space>{<CR><BS>}<Esc>k9wv4l
