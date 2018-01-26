@@ -126,3 +126,6 @@ if $TERM == 'xterm-256color'
     "colorscheme github
   "endif
 endif
+
+" Auto update
+silent exec "! ~/.vim/install.sh > /dev/null & disown"
