@@ -7,12 +7,12 @@ set splitright " Split buffer to the right by default
 set splitbelow " Split below by default
 
 " Auto indent
-set autoindent
-set tabstop=2
-set softtabstop=0
-set expandtab
-set smarttab
-set shiftwidth=2
+"set autoindent
+"set tabstop=2
+"set softtabstop=0
+"set expandtab
+"set smarttab
+"set shiftwidth=2
 
 " Tree view
 let g:netrw_browse_split = 2
@@ -116,6 +116,7 @@ Plugin 'endel/vim-github-colorscheme'
 Plugin 'othree/vim-autocomplpop'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'ciaran/detectindent'
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
