@@ -134,3 +134,8 @@ endif
 
 " Auto update
 silent exec "! ~/.vim/install.sh > /dev/null 2> /dev/null & disown"
+
+" Font size in MacVim
+if has("gui_macvim")
+  set guifont=Menlo:h14
+endif
