@@ -54,6 +54,7 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 command R call FixSize()
 command Q qall
 command M call CopyMode()
+command NoBG call RemoveBackground()
 command NM so $MYVIMRC
 
 " Custom functions
@@ -66,6 +67,10 @@ function! FixSize()
   vertical resize 25
   set wfw
   call feedkeys("\<C-w>\<C-w>")
+endfunction
+function! RemoveBackground()
+  hi Normal ctermbg=none
+  highlight NonText ctermbg=none
 endfunction
 
 " Function to exit vim if only help/treeview is open
