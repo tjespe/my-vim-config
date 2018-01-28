@@ -116,7 +116,7 @@ Plugin 'endel/vim-github-colorscheme'
 Plugin 'othree/vim-autocomplpop'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'ciaran/detectindent'
+Plugin 'ciaranm/detectindent'
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
