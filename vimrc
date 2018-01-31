@@ -51,11 +51,15 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 " Custom commands:
+" Fix size of NetrwTreeListing
 command R call FixSize()
-command Q qall
+" Enter copy mode
 command M call CopyMode()
+" Remove background
 command NoBG call RemoveBackground()
 command NM so $MYVIMRC
+" Word count
+command WC ! wc -w '%'
 
 " Custom functions
 function! CopyMode()
