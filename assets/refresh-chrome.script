@@ -1,0 +1,23 @@
+#!/usr/bin/env osascript
+on run argv
+  if (count of argv) > 0 then
+    repeat with arg in argv
+      tell application "Google Chrome"
+          repeat with w in windows
+              set i to 1
+              repeat with t in tabs of w
+                  if URL of t contains arg then
+                      set active tab index of w to i
+                      set index of w to 1
+                      tell active tab of w to reload
+                      return
+                  end if
+                  set i to i + 1
+              end repeat
+          end repeat
+      end tell
+    end repeat
+  else
+    log "You need to specify which sites should be reloaded by passing command line arguments.\n\nEach argument will be parsed as a separate keyword. If a tab's URL contains the keyword it will be reloaded"
+  end if
+end run
