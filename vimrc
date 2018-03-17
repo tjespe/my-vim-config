@@ -60,10 +60,6 @@ command NoBG call RemoveBackground()
 command NM so $MYVIMRC
 " Word count
 command WC ! wc -w '%'
-if executable("osascript")
-  command ReloadChrome call ReloadChrome()
-  autocmd BufWritePost * ReloadChrome
-endif
 
 " Custom functions
 function! CopyMode()
@@ -79,9 +75,6 @@ endfunction
 function! RemoveBackground()
   hi Normal ctermbg=none
   highlight NonText ctermbg=none
-endfunction
-function! ReloadChrome()
-  silent exec '!~/.vim/assets/refresh-chrome.script localhost "file://" $(pwd | sed "s/\// /g")'
 endfunction
 
 " Function to exit vim if only help/treeview is open
