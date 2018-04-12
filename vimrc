@@ -126,6 +126,7 @@ Plugin 'othree/vim-autocomplpop'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ciaranm/detectindent'
+Plugin 'dhruvasagar/vim-table-mode'
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
