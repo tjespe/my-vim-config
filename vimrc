@@ -86,7 +86,8 @@ function! CheckLeftBuffers()
             \ getbufvar(winbufnr(i), '&buftype') == 'quickfix' ||
             \ exists('t:NERDTreeBufName') &&
             \   bufname(winbufnr(i)) == t:NERDTreeBufName ||
-            \ bufname(winbufnr(i)) == 'NetrwTreeListing 1'
+            \ bufname(winbufnr(i)) == 'NetrwTreeListing 1' ||
+            \ bufname(winbufnr(i)) == 'NetrwTreeListing'
         let i += 1
       else
         break
