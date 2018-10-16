@@ -35,6 +35,7 @@ cmap Q q!
 
 " Auto complete
 set completeopt=longest,menuone
+nnoremap <F9> :w<CR>:!%:p<CR>
 inoremap {<CR> {<CR>}<Esc>ko
 autocmd FileType javascript,html inoremap for<Space> for<Space>(i<Space>=<Space>0;i<Space><<Space>array.length;i++)<Space>{<CR><BS>}<Esc>k8wv4ls
 autocmd FileType php inoremap for<Space> for<Space>($i<Space>=<Space>0;$i<Space><<Space>$array.length;$i++)<Space>{<CR><BS>}<Esc>k9wv4l
