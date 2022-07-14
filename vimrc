@@ -33,6 +33,10 @@ set number
 cmap w!! w !sudo tee > /dev/null %
 cmap Q q!
 
+" Git blame config
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+
+
 " Auto complete
 set completeopt=longest,menuone
 nnoremap <F9> :w<CR>:!%:p<CR>
@@ -129,6 +133,7 @@ Plugin 'vim-scripts/L9'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ciaranm/detectindent'
 Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'zivyangll/git-blame.vim'
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
