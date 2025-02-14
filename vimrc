@@ -133,6 +133,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'ciaranm/detectindent'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'zivyangll/git-blame.vim'
+Plugin 'mg979/vim-visual-multi'
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
